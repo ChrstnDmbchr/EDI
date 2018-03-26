@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
 
 				dispatcher = connection.playArbitraryInput(ytdl(
 					'https://www.youtube.com/watch?v=0bwC1zJE49U&list=PLTgKUWDZ5rsz3sO77RiKSmrYr0aEBaXPQ',
-					{filter: 'audioonly'})
+					{filter: 'audioonly', quality: 'highestaudio'})
 				);
 				dispatcher.setVolume(0.5);
 
