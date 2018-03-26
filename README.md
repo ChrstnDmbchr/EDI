@@ -17,7 +17,7 @@ Current list of commands:
 - [x] "!link": Creates a link for the bot to be added to other servers.
 - [x] "!8ball": Gives a magic 8 ball response to a questions asked.
 - [x] "!firsttogo": One for the BR gamers. Generates a list of everyone in the same voice channel as you and will predict who will go down first.
-- [x] "!remindme": set a reminder and time and the bot will dm the user with the reminder after the elapsed time (in minutes)
+- [x] "!remindme": set a reminder and time in the format !remindme @6:59pm *message* and the bot will dm the user with the reminder at the specifed time.
 - [x] "!play some dirty synthwave" : plays nasty tunes 
 - [x] "!play nothing" : stops music currently being played in the voice channel you are in.
 - [ ] joke: Tells a random joke.
