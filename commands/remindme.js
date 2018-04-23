@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor('#447ec4')
     .setTitle(`Hey ${message.author.username}, your reminder has now been set!`)
     .setDescription(`I'll DM you your reminder when the time is up!`)
-
+    
     message.channel.send(embed);
 
     let currTime = setInterval(() => {

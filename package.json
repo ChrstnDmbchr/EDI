@@ -2,10 +2,11 @@
   "name": "edi",
   "version": "1.0.0",
   "description": "EDI, a Discord bot created using the Discord.js library",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node index"
+    "run": "node server",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,10 @@
     "express": "^4.16.3",
     "ffmpeg-binaries": "^3.2.2-3",
     "node-opus": "^0.2.7",
-    "nodemon": "^1.17.2",
     "ytdl-core": "^0.20.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3"
   }
 }
