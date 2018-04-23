@@ -1,6 +1,7 @@
 
 const Discord = require('discord.js');
 const ytdl = require('ytdl-core');
+const path = require('path');
 
 const bot = require('../bot');
 
@@ -22,8 +23,8 @@ module.exports.run = async (bot, message, args) => {
     if (!connection) {
       connection = await guildMember.voiceChannel.join()
       .then(connection => {
-        dispatcher = connection.playFile(`./audio/${args.play}.mp3`);
-        dispatcher.setVolume(0.5);
+        const dispatcher = connection.playFile(path.resolve(__dirname, 'audio', `${args.play}.mp3`));
+        dispatcher.setVolume(0.2);
         dispatcher.on('end', end => {
           if (dispatcher){
             dispatcher.end();
