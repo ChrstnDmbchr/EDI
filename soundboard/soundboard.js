@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   let guildMember
   for (let i = 0; i < guildArr.length; i++) {
     if(guildArr[i][1].members.get('136499610947551232').voiceChannelID){
-      guildMember = guildArr[i][1].members.get('136499610947551232')
+      guildMember = guildArr[i][1].members.get('136499610947551232');
     }
   };
   //
@@ -26,6 +26,9 @@ module.exports.run = async (bot, message, args) => {
     dispatcher = connection.playFile(`./audio/${args.play}.mp3`);
     dispatcher.setVolume(0.5);
     dispatcher.on('end', end => {
+      if (dispatcher){
+        dispatcher.end();
+      }
       guildMember.voiceChannel.leave();
     })
   } else {

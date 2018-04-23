@@ -21,5 +21,4 @@ Current list of commands:
 - [x] "!play some dirty synthwave": Plays nasty tunes 
 - [x] "!play nothing": Stops music currently being played in the voice channel you are in.
 - [ ] "!help": Displays list of commands.
-- [ ] "!joke": Tells a random joke.
-- [ ] "!21": Game of 21 which persistantly tracks the stats of each user including winnings. 
+- [ ] integrated soundboard
