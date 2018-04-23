@@ -29,8 +29,9 @@ bot.on('ready', async () => {
     } else {
         console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`)
     }
-    
+
     bot.user.setActivity('you type', {type: 'WATCHING'});
+
 });
 
 
@@ -48,4 +49,4 @@ bot.on('message', async (message) => {
 
 });
 
-bot.login(botconfig.token);
+module.exports = bot
