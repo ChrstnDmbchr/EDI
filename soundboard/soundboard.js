@@ -5,7 +5,6 @@ const ytdl = require('ytdl-core');
 const bot = require('../bot');
 
 let connection = null;
-let dispatcher = null;
 
 module.exports.run = async (bot, message, args) => {
   
@@ -21,16 +20,21 @@ module.exports.run = async (bot, message, args) => {
 
   if (guildMember) {
     if (!connection) {
-      connection = await guildMember.voiceChannel.join();
+      connection = await guildMember.voiceChannel.join()
+      .then(connection => {
+        dispatcher = connection.playFile(`./audio/${args.play}.mp3`);
+        dispatcher.setVolume(0.5);
+        dispatcher.on('end', end => {
+          if (dispatcher){
+            dispatcher.end();
+          }
+          guildMember.voiceChannel.leave();
+        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
     }
-    dispatcher = connection.playFile(`./audio/${args.play}.mp3`);
-    dispatcher.setVolume(0.5);
-    dispatcher.on('end', end => {
-      if (dispatcher){
-        dispatcher.end();
-      }
-      guildMember.voiceChannel.leave();
-    })
   } else {
     console.log('ERROR: User ItsChrstn is not in a voice channel, soundboard not playing.')
   }
