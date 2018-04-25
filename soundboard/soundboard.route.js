@@ -6,9 +6,12 @@ const bot = require('../bot');
 const formBody = require('body/form')
 
 const soundboard = require('./soundboard');
+const generatePage = require('./soundboardGenerator');
 
 router.get('/', (req, res) => {
-  res.status(200).sendFile(path.resolve(__dirname, 'soundboard.html'));
+  generatePage(() => {
+    res.status(200).sendFile(path.resolve(__dirname, 'soundboard.html'));
+  })
 });
 
 router.post('/', (req, res) => {
