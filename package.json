@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ChrstnDmbchr/EDI#readme",
   "dependencies": {
+    "body": "^5.1.0",
     "body-parser": "^1.18.2",
     "discord.js": "^11.3.2",
     "express": "^4.16.3",

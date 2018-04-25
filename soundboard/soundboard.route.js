@@ -1,19 +1,21 @@
 const express = require('express');
 const router = express.Router();
-
+const path = require('path')
 const bot = require('../bot');
+
+const formBody = require('body/form')
 
 const soundboard = require('./soundboard');
 
 router.get('/', (req, res) => {
-  res.status(200).send('<h1>This is the soundboard page!</h1>');
+  res.status(200).sendFile(path.resolve(__dirname, 'soundboard.html'));
 });
 
 router.post('/', (req, res) => {
-  soundboard.run(bot, null, req.body);
-  res.status(200).send({
-    success: `playing ${req.body.play}`
-  });
+  formBody(req, (err, body) => {
+    soundboard.run(bot, null, body);
+  })
+
 });
 
 module.exports = router;
