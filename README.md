@@ -21,4 +21,4 @@ Current list of commands:
 - [x] "!play some dirty synthwave": Plays nasty tunes 
 - [x] "!play nothing": Stops music currently being played in the voice channel you are in.
 - [ ] "!help": Displays list of commands.
-- [ ] integrated soundboard
+- [ ] integrated soundboard : create directory in the soundboard directory called 'audio'. any mp3 file in this directory will be added to the soundboard.
