@@ -1,3 +1,4 @@
 node_modules
 botconfig.json
 soundboard/audio/*
+public/node_modules

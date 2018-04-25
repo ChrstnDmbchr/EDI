@@ -24,13 +24,13 @@ module.exports.run = async (bot, message, args) => {
     if (!connection) {
       connection = await guildMember.voiceChannel.join()
       .then(connection => {
-        const dispatcher = connection.playFile(path.resolve(__dirname, 'audio', `${args.play}.mp3`));
+        const dispatcher = connection.playFile(path.resolve(__dirname, 'audio', `${args.play}`));
         dispatcher.setVolume(0.2);
         dispatcher.on('end', end => {
           if (dispatcher){
             dispatcher.end();
           }
-          console.log(`${args.play}.mp3 finished playing`);
+          console.log(`${args.play} finished playing`);
           guildMember.voiceChannel.leave();
         })
       })
