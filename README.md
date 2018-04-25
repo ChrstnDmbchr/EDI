@@ -20,5 +20,5 @@ Current list of commands:
 - [x] "!remindme": Sets a reminder and time in the format !remindme @6:59pm *message* and the bot will dm the user with the reminder at the specifed time.
 - [x] "!play some dirty synthwave": Plays nasty tunes 
 - [x] "!play nothing": Stops music currently being played in the voice channel you are in.
-- [ ] integrated soundboard : Create directory in the soundboard directory called 'audio'. Place audio files you wish to use in here. Browse to localhost:3000/api/soundboard to access front end. Type the name of the file you wish to play and click button.
+- [x] integrated soundboard : Create directory in the soundboard directory called 'audio'. Place audio files you wish to use in here. Browse to localhost:3000/api/soundboard to access front end. Type the name of the file you wish to play and click button.
 - [ ] "!help": Displays list of commands.
