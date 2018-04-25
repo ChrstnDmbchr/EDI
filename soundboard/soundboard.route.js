@@ -14,8 +14,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   formBody(req, (err, body) => {
     soundboard.run(bot, null, body);
-  })
-
+  });
 });
 
 module.exports = router;
