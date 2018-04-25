@@ -16,9 +16,9 @@ $(document).ready(function () {
     var str = ''
     data.forEach(function (file) {
       str += `<form action="/api/soundboard" method="POST">
-  <input type="hidden" name="play" value="${file}">
-  <button>${file.split('.')[0]}</button>
-</form>`
+              <input type="hidden" name="play" value="${file}">
+              <button>${file.split('.')[0]}</button>
+              </form>`
     });
     $('#container').html(str);
   });
