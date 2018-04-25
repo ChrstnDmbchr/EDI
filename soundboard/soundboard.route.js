@@ -15,6 +15,7 @@ router.post('/', (req, res) => {
   formBody(req, (err, body) => {
     soundboard.run(bot, null, body);
   });
+  res.redirect('back');
 });
 
 module.exports = router;
