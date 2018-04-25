@@ -8,7 +8,7 @@ const soundboardRouter = require('./soundboard/soundboard.route');
 
 
 // middleware
-app.use(morgan('dev'))
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 //
 

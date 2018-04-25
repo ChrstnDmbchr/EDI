@@ -5,13 +5,14 @@ const path = require('path');
 
 const bot = require('../bot');
 
-let connection = null;
+let connection
 
 module.exports.run = async (bot, message, args) => {
   
-  // Enter the voice channel of user ItsChrstn as soundboard does not message
-  const guildArr = Array.from(bot.guilds)
-  let guildMember
+  // Enter the voice channel of user ItsChrstn (136499610947551232). will need to be modified for other users for now.
+  // loops through all the guilds the bot is on and finds the the guild member information.
+  const guildArr = Array.from(bot.guilds);
+  let guildMember;
   for (let i = 0; i < guildArr.length; i++) {
     if(guildArr[i][1].members.get('136499610947551232').voiceChannelID){
       guildMember = guildArr[i][1].members.get('136499610947551232');
@@ -29,15 +30,16 @@ module.exports.run = async (bot, message, args) => {
           if (dispatcher){
             dispatcher.end();
           }
+          console.log(`${args.play}.mp3 finished playing`);
           guildMember.voiceChannel.leave();
         })
       })
       .catch(err => {
-        console.log(err)
-      })
-    }
+        console.log(err);
+      });
+    };
   } else {
-    console.log('ERROR: User ItsChrstn is not in a voice channel, soundboard not playing.')
+    console.log('ERROR: User is not in a voice channel, soundboard not playing.');
   }
 
 };
