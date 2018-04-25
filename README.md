@@ -21,4 +21,6 @@ Current list of commands:
 - [x] "!play some dirty synthwave": Plays nasty tunes 
 - [x] "!play nothing": Stops music currently being played in the voice channel you are in.
 - [ ] "!help": Displays list of commands.
-- [ ] integrated soundboard : create directory in the soundboard directory called 'audio'. any mp3 file in this directory will be added to the soundboard. Browse to /api/soundboard to access front end.
+- [ ] integrated soundboard : 
+      - Create directory in the soundboard directory called 'audio'. Place audio files you wish to use in here.
+      - Browse to /api/soundboard to access front end. Type the name of the file you wish to play and click button.
