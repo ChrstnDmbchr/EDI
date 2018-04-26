@@ -4,8 +4,8 @@ function playFile(file) {
     method: 'POST',
     data: JSON.stringify(file),
     contentType: 'application/json'
-  })
-}
+  });
+};
 
 $(document).ready(function () {
   $.ajax({
@@ -22,8 +22,8 @@ $(document).ready(function () {
     });
     $('#container').html(str);
   });
-})
+});
 
 $("btn").click(function () {
   playFile(this.value);
-})
+});
